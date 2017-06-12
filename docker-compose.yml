@@ -16,7 +16,7 @@ php:
     environment:
         WORDPRESS_DB_HOST: mysql
         WORDPRESS_DB_USER: wordpress
-        WORDPRESS_DB_PASSWORD: secret    
+        WORDPRESS_DB_PASSWORD: secret
     volumes_from:
         - app
 
@@ -41,3 +41,14 @@ data:
     volumes:
         - /var/lib/mysql
     command: "true"
+
+phpadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 8080:80
+    links:
+      - mysql
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: wordpress
+      PMA_PASSWORD: secret
