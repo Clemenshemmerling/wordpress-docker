@@ -1,23 +1,13 @@
-<!doctype html>
-<html class="no-js" lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php bloginfo(title); ?></title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/font-awesome.css">
-    <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="css/foundation.css">
-    <link rel="stylesheet" href="<? php bloginfo(stylesheet_url); ?>">
-  </head>
-  <body>
-    <h1><?php bloginfo(name); ?></h1>
-    <p><?php bloginfo(description); ?></p>
-    <p><?php bloginfo(url); ?></p>
-    <p><?php bloginfo(language); ?></p>
-    <p><?php bloginfo(stylesheet_url); ?></p>
-    <p><?php bloginfo(stylesheet_directory); ?></p>
+<?php get_header("home"); ?>
+<?php get_header(); ?>
+    <div class="row small-12">
+      <div class="column small-12 medium-9">
+        <h3>Bloque principal</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <?php get_sidebar(); ?>
+    </div>
+    <?php get_footer(); ?>
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/jquery-ui.js"></script>
     <script src="js/vendor/vue.js"></script>
