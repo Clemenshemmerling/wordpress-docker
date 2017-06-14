@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-<body>
   <header>
     <div class="row small-12 align-center">
       <div class="column small-12">
