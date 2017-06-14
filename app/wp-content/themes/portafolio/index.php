@@ -20,6 +20,14 @@
          ?>
          <article>
           <h2><?php the_title(); ?></h2>
+          <?php
+              if (has_post_thumbnail()) {
+                the_post_thumbnail('thumbnail');
+                the_post_thumbnail('large');
+                the_post_thumbnail('medium');
+                the_post_thumbnail('full');
+              }
+          ?>
           <p><?php the_excerpt(); ?></p>
           <footer>
             <small><?php the_tags(); ?> <?php the_author(); ?></small>
